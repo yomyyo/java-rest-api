@@ -11,6 +11,7 @@ public class RabbitMQConfig {
     public static Channel createChannel() throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
 
+        // Maybe you want to do factory.setUsername and factory.setPassword here too the specify server
         factory.setHost("localhost");
 
         Connection connection = factory.newConnection();
